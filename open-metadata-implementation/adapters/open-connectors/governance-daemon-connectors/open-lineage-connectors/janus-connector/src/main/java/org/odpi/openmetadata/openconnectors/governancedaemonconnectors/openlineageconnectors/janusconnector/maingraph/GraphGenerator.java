@@ -38,6 +38,7 @@ public class GraphGenerator {
 
 
     public GraphGenerator(JanusGraph mockGraph) {
+        this.mockGraph = mockGraph;
         setProperties();
         generate();
     }
@@ -49,11 +50,11 @@ public class GraphGenerator {
      * The length of this path is specified by the number of processes within the flow.
      */
     private void setProperties() {
-        this.cyclic = true;
+        this.cyclic = false;
         this.numberGlossaryTerms = 4;
         this.numberFlows = 1;
-        this.processesPerFlow = 2;
-        this.columnsPerTable = 2;
+        this.processesPerFlow = 4;
+        this.columnsPerTable = 4;
 
         this.tablesPerFlow = processesPerFlow + 1;
         if (cyclic) {

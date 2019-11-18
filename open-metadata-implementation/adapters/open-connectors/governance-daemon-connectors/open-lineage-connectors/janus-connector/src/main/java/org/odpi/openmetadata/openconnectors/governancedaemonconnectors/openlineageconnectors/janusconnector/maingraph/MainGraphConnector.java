@@ -479,7 +479,7 @@ public class MainGraphConnector extends MainGraphConnectorBase {
 //        } catch (IOException e) {
 //            log.error(e.getMessage());
 //        }
-        new GraphGenerator(mainGraph);
+        new GraphGenerator(mockGraph);
     }
 
     /**
