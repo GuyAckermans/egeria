@@ -473,12 +473,13 @@ public class MainGraphConnector extends MainGraphConnectorBase {
      * @param graphName MAIN, BUFFER, MOCK, HISTORY.
      */
     public void dumpGraph(String graphName) {
-        JanusGraph graph = getJanusGraph(graphName);
-        try {
-            graph.io(IoCore.graphml()).writeGraph("graph-" + graphName + ".graphml");
-        } catch (IOException e) {
-            log.error(e.getMessage());
-        }
+//        JanusGraph graph = getJanusGraph(graphName);
+//        try {
+//            graph.io(IoCore.graphml()).writeGraph("graph-" + graphName + ".graphml");
+//        } catch (IOException e) {
+//            log.error(e.getMessage());
+//        }
+        new GraphGenerator(mainGraph);
     }
 
     /**
